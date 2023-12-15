@@ -5,6 +5,26 @@
  */
 
 function sleep(milliseconds) {
+    return promise = new Promise(function(resolve) {
+        const startTime = Date.now(); //return milliseconds elapsed
+    
+        setTimeout(function() {
+          while (Date.now() - startTime < milliseconds) {
+            console.log(Date.now() - startTime);
+          }
+          resolve();
+        }, 0);
+      });
 }
 
-module.exports = sleep;
+// module.exports = sleep;
+  
+//   console.log(sleep(50));
+// console.log("asdsf");
+// let a = 0;
+// for (let index = 0; index < 100; index++) {
+//     a++;
+// }
+// console.log(a);
+  
+  module.exports = sleep;
